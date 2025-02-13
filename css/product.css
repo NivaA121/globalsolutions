@@ -1,0 +1,345 @@
+.product-select {
+  color: rgb(34, 171, 235);
+}
+
+.dealer{
+  height: 7rem;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right,black,#001C3D, #1D396D, #115895,#008AD4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 3rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-35rem * 7));
+  }
+}
+
+.slider {
+  background: white;
+  
+  height: 30rem; /* Increased height for larger logos */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.slider .slide-track {
+  animation: scroll 60s linear infinite; /* Adjusted animation duration for smoother scrolling */
+  display: flex;
+  width: calc(35rem * 14); /* Increased slide width from 25rem to 35rem */
+}
+
+.slider .slide {
+  height: 30rem;
+  width: 40rem; /* Adjusted width to fit logos */
+  margin: 0 4rem; /* Adjusted margin for spacing between logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .slide img {
+  max-width: 100%; /* Adjusted max-width to fit logos within the slide */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure logos are not stretched or distorted */
+}
+
+
+.dealer1{
+    width: 100%;
+    height: 16rem;
+    background-image: linear-gradient(to bottom right,#152A51, #003473, #22abeb);
+    color: white;
+    align-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+  
+}
+
+.center-box1 {
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+padding: 2rem;
+width: 1500px;
+height: 540px;
+text-align: center;
+transition: box-shadow 0.3s ease;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+margin: 0 auto; /* This centers the box horizontally */
+
+justify-content: center;
+align-items: center;
+margin-top: 7rem;
+margin-bottom: 5rem;
+}
+
+.center-box1:hover {
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.logo1 {
+width: 250px;
+height: 150px;
+
+}
+
+.container1 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 20px;
+width: 800px;
+margin: 0 auto;
+
+justify-content: center;
+
+}
+
+.box {
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.2); /* Adds a semi-transparent dark layer */
+}
+
+.text {
+color: white;
+font-size: 24px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-weight: bold;
+text-align: center;
+}
+
+.center-box2 {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 1500px;
+  height: 1000px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto; /* This centers the box horizontally */
+  
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 5rem;
+  }
+  
+  .center-box2:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo2 {
+  width: 380px;
+  height: 150px;
+  margin-top: 2rem;
+  }
+  
+  .container2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 1400px;
+  margin: 0 auto;
+  height: 300px;
+  justify-content: center;
+  margin-top: 3rem;
+  }
+  
+  .box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  }
+  
+  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Adds a semi-transparent dark layer */
+  }
+  
+  .text {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-align: center;
+  }
+
+  .container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 1150px;
+    margin: 0 auto;
+    height: 300px;
+    justify-content: center;
+    margin-top: 8rem;
+    }
+    
+    .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+    
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Adds a semi-transparent dark layer */
+    }
+    
+    .text {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-align: center;
+    }
+
+    .center-box3 {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 1500px;
+      height: 600px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      margin: 0 auto; /* This centers the box horizontally */
+      
+      justify-content: center;
+      align-items: center;
+      
+      margin-bottom: 5rem;
+      }
+      
+      .center-box3:hover {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      }
+      
+      .logo3 {
+      width: 300px;
+      height: 130px;
+      margin-top: 2rem;
+      }
+      
+      .container4 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      width: 1400px;
+      margin: 0 auto;
+      height: 300px;
+      justify-content: center;
+      margin-top: 3rem;
+      }
+      
+      .box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      }
+      
+      .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.2); /* Adds a semi-transparent dark layer */
+      }
+      
+      .text {
+      color: white;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      text-align: center;
+      }
+      
+      .container-background {
+        background-color: #EAEAEC; /* Light grey background */
+        padding: 3rem 0; /* Adds padding above and below the boxes */
+    }
+
+

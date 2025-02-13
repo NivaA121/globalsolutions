@@ -1,0 +1,658 @@
+html {
+    font-size: 62.5%;
+}
+
+
+
+.emergency{
+    width: 100%;
+    height: 6.0rem;
+    background-color: rgb(34, 171, 235);
+    font-size: 2.0rem;
+    color: white;
+    align-content: center;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    
+    background-image: url(../logo.png);
+   
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5.0rem;
+    margin-top: 1rem;
+    
+}
+
+.logo-home {
+    display: flex;
+    height: 10rem;
+}
+
+.logo-home ul {
+    display: flex;
+    align-self: center;
+    padding-right: 16.0rem;
+    
+}
+
+.logo-home ul li {
+    display: block;
+    padding: 0 2.0rem;
+    white-space: nowrap;
+    font-size: 2.0rem;
+
+}
+
+.about-select{
+    color: rgb(34, 171, 235);
+}
+
+.logo-home ul li:hover {
+    color: rgb(34, 171, 235);
+    cursor: pointer;
+}
+
+.list-home{
+    margin-left: 80rem;
+}
+/*
+.about{
+    width: 100%;
+    height: 7.5rem;
+    color: #003473;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    
+    
+    
+}
+*/
+
+/*
+.objective{
+    width: 100%;
+    height: 6rem;
+    background-image: radial-gradient(#003473, #22abeb);
+    color: white;
+    align-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+
+linear-gradient(90deg, #1f3467, #008ad4 70%)
+*/
+
+.objective {
+    width: 100%;
+    height: 16rem;
+    background-image: linear-gradient(to bottom right,black,#001329,#001C3D,#152A51, #003473, #22abeb);
+    color: white;
+    align-content: center;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+
+
+
+
+.about-gs{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 15rem;
+    align-content: center;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.offering1 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering1 p {
+    text-align: center;
+}
+
+.offering1 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering2 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+   
+}
+
+.offering2 p {
+    text-align: center;
+}
+
+.offering2 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering3 {
+    width: 15.0rem;
+    height:11.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering3 p {
+    text-align: center;
+}
+
+.offering3 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering4 {
+    width: 15.0rem;
+    height:15.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering4 p {
+    text-align: center;
+}
+
+.offering4 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering5 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering5 p {
+    text-align: center;
+}
+
+.offering5 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering6 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering6 p {
+    text-align: center;
+}
+
+.offering6 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offering7 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.offering7 p {
+    text-align: center;
+}
+
+.offering7 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.offerings {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2rem;
+    
+}
+
+.about-gs2{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 12rem;
+    align-content: center;
+    text-align: center;
+    line-height: 2.5rem;
+}
+/*
+.team{
+    width: 100%;
+    height: 6rem;
+    background-image: radial-gradient(#003473, #22abeb);
+    color: white;
+    align-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+*/
+
+.team{
+    width: 100%;
+    height: 14rem;
+    align-content: center;
+    text-align: center;
+    
+    /*
+    background: linear-gradient(90deg, #1f3467, #008ad4 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    color:white;
+    font-weight: 600;
+    font-size: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+    
+}
+
+.teams{
+    background-image: linear-gradient(to bottom right,#001329,#001C3D,#152A51, #003473, #22abeb);
+    height: 61.5rem;
+}
+
+.team7{
+    height: 10rem;
+    width: 30rem;
+    
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    
+}
+
+.team7 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team7 p{
+    font-size: 1.7rem;
+}
+
+.team1{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.team1 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team1 p{
+    font-size: 1.7rem;
+}
+
+.team2{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    margin-left: 30rem;
+}
+
+.team2 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team2 p{
+    font-size: 1.7rem;
+}
+
+.team1-team2{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    
+}
+
+.team1-team2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.team3{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.team3 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team3 p{
+    font-size: 1.7rem;
+}
+
+.team4{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    margin-left: 30rem;
+    
+}
+
+.team4 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team4 p{
+    font-size: 1.7rem;
+}
+
+.team3-team4{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    
+}
+
+.team3-team4:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.team5{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.team5 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team5 p{
+    font-size: 1.7rem;
+}
+
+.team6{
+    height: 10rem;
+    float: left;
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    margin-left: 30rem;
+}
+
+.team6 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team6 p{
+    font-size: 1.7rem;
+}
+
+.team5-team6{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    
+}
+
+.team5-team6:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.title1{
+    height: 5rem;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right,black,#001C3D, #1D396D, #115895,#008AD4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 3rem;
+}
+
+.explain1{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 7.5rem;
+    align-content: center;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.title2{
+    height: 5rem;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right,black,#001C3D, #1D396D, #115895,#008AD4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.explain2{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 7.5rem;
+    align-content: center;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.title3{
+    height: 5rem;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right,black,#001C3D, #1D396D, #115895,#008AD4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.5rem;
+}
+
+.explain3{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 10rem;
+    align-content: center;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 1rem;
+}
+
+.explain4_1 {
+    width: 15.0rem;
+    height:13.0rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.explain4_1 p {
+    text-align: center;
+}
+
+.explain4_1 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.explain4_2 {
+    width: 15.0rem;
+    height:12.95rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.explain4_2 p {
+    text-align: center;
+}
+
+.explain4_2 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.explain4_3 {
+    width: 15.0rem;
+    height:12.95rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.explain4_3 p {
+    text-align: center;
+}
+
+.explain4_3 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.explain4_4 {
+    width: 15.0rem;
+    height:11rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.explain4_4 p {
+    text-align: center;
+}
+
+.explain4_4 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.explain4_5 {
+    width: 15.0rem;
+    height:12.95rem;
+    background-color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.explain4_5 p {
+    text-align: center;
+}
+
+.explain4_5 img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.explain4    {
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
