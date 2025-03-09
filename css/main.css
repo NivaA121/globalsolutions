@@ -14,30 +14,25 @@ html {
     text-align: center;
 }
 
-.logo {
-    width: 15rem;
-    height: 8.0rem;
-    background-image: url(../logo.png);
-   
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    /*margin-left: 5.0rem;
-    margin-bottom: 1.0rem;*/
-    
-    display: block;
-    
+.logo-home {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0 2rem !important;
+    max-width: 120rem !important;
+    margin: auto !important;
+    position: relative !important;
 }
 
-.logo-home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    max-width: 120rem; /* Prevents excessive stretching */
-    margin: auto; /* Centers the header */
-    
-
+.logo {
+    width: 100% !important;
+    height: 8.0rem !important;
+    background-image: url(../logo.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: left !important;
+    display: block !important;
+    margin-left: 0 !important;
 }
 
 .logo-home ul {
@@ -57,7 +52,8 @@ html {
     list-style: none;
     margin: 0;
     padding: 0%;
-    
+    margin-left: auto;
+    margin-right: -30rem;
     
 }
 
