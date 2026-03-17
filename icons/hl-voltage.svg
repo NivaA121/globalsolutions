@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Warning triangle -->
+  <path d="M256 68 L468 424 Q480 448 456 448 L56 448 Q32 448 44 424 Z" rx="20"/>
+  <!-- Inner lightning bolt -->
+  <polyline points="278,200 228,312 268,312 234,390" stroke-width="26"/>
+</svg>

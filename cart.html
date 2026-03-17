@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart – Global Solutions</title>
+    <meta name="description" content="Review your cart and proceed to checkout at Global Solutions.">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="emergency">EMERGENCY HOTLINE: Are there any current security concerns? 9998020110</div>
+        <nav class="logo-home">
+            <div class="logo"></div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <ul class="list-home">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="cart.html" class="nav-cart-link" title="View Cart" aria-label="Shopping Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        <span class="nav-cart-badge" style="display:none">0</span>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== CART PAGE ===== -->
+    <div class="cart-page">
+
+        <!-- Page Title -->
+        <h1 class="cart-title">Cart</h1>
+
+        <!-- Step Progress Bar -->
+        <div class="cart-steps" id="cart-steps">
+            <div class="cart-step active" data-step="1">
+                <span class="step-number">1.</span>
+                <span class="step-label">Cart</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="cart-step" data-step="2">
+                <span class="step-number">2.</span>
+                <span class="step-label">Checkout</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="cart-step" data-step="3">
+                <span class="step-number">3.</span>
+                <span class="step-label">Payment</span>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="cart-content">
+
+            <!-- ========== LEFT COLUMN ========== -->
+            <div class="cart-left">
+
+                <!-- ===== STEP 1: CART ITEMS (dynamically populated from localStorage) ===== -->
+                <div class="cart-section" id="step-1-content">
+                    <!-- Cart items rendered by cart.js -->
+                </div>
+                <!-- /step-1-content -->
+
+                <!-- ===== STEP 2: CHECKOUT FORM ===== -->
+                <div class="cart-section hidden" id="step-2-content">
+
+                    <!-- Validation Error Banner (hidden by default) -->
+                    <div class="checkout-error-banner hidden" id="checkout-error-banner">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <span>Please fill in all required fields before placing your order.</span>
+                    </div>
+
+                    <!-- Personal Details -->
+                    <div class="checkout-block">
+                        <div class="checkout-block-header">
+                            <h3><span class="block-num">1.</span> Personal Details</h3>
+                        </div>
+                        <div class="checkout-fields-row">
+                            <div class="checkout-field">
+                                <label>First Name <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-firstname" placeholder="Enter first name" required>
+                            </div>
+                            <div class="checkout-field">
+                                <label>Last Name <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-lastname" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+                        <div class="checkout-fields-row" style="margin-top: 1.6rem;">
+                            <div class="checkout-field">
+                                <label>Gender <span class="required-star">*</span></label>
+                                <select id="checkout-gender" required>
+                                    <option value="" disabled selected>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="checkout-field">
+                                <label>Date of Birth <span class="required-star">*</span></label>
+                                <input type="date" id="checkout-dob" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Details -->
+                    <div class="checkout-block">
+                        <div class="checkout-block-header">
+                            <h3><span class="block-num">2.</span> Account Details</h3>
+                            <a href="#" class="change-link">Change</a>
+                        </div>
+                        <div class="checkout-fields-row">
+                            <div class="checkout-field">
+                                <label>Email ID <span class="required-star">*</span></label>
+                                <input type="email" id="checkout-email" placeholder="Enter email" required>
+                            </div>
+                            <div class="checkout-field">
+                                <label>Mobile Number <span class="required-star">*</span></label>
+                                <div class="phone-input-wrap">
+                                    <input type="tel" id="checkout-phone" placeholder="+91 XXXXX XXXXX" value="+91 "
+                                        required>
+                                    <span class="phone-verified">✅</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div class="checkout-block">
+                        <div class="checkout-block-header">
+                            <h3><span class="block-num">3.</span> Delivery Address</h3>
+                            <a href="#" class="change-link">Change</a>
+                        </div>
+                        <div class="checkout-fields-row">
+                            <div class="checkout-field">
+                                <label>Street Address <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-address" placeholder="Enter street address" required>
+                            </div>
+                        </div>
+                        <div class="checkout-fields-row" style="margin-top: 1.6rem;">
+                            <div class="checkout-field">
+                                <label>City <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-city" placeholder="Enter city" required>
+                            </div>
+                            <div class="checkout-field">
+                                <label>State <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-state" placeholder="Enter state" required>
+
+                            </div>
+                            <div class="checkout-field">
+                                <label>PIN Code <span class="required-star">*</span></label>
+                                <input type="text" id="checkout-pincode" placeholder="Enter PIN code" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details -->
+                    <div class="checkout-block">
+                        <div class="checkout-block-header">
+                            <h3><span class="block-num">4.</span> Payment Details</h3>
+                        </div>
+                        <div class="payment-methods">
+                            <label class="payment-option selected">
+                                <input type="radio" name="payment-method" value="card" checked>
+                                <span class="radio-dot"></span>
+                                Debit/Credit Card
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="upi">
+                                <span class="radio-dot"></span>
+                                UPI
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="cod">
+                                <span class="radio-dot"></span>
+                                Cash on Delivery
+                                <span class="cod-badge">+₹200</span>
+                            </label>
+                        </div>
+                        <div class="cod-info hidden" id="cod-info">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <span>An additional charge of <strong>₹200</strong> will be applied for Cash on Delivery
+                                orders.</span>
+                        </div>
+                        <div class="card-fields" id="card-fields">
+                            <div class="checkout-field full-width">
+                                <label>Name on card <span class="required-star">*</span></label>
+                                <input type="text" id="card-name" placeholder="Enter name" required>
+                            </div>
+                            <div class="checkout-fields-row three-col">
+                                <div class="checkout-field">
+                                    <label>Expiry Date <span class="required-star">*</span></label>
+                                    <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="checkout-field">
+                                    <label>Security Code <span class="required-star">*</span></label>
+                                    <input type="text" id="card-cvv" placeholder="000" required>
+                                </div>
+                                <div class="checkout-field">
+                                    <label>Postal Code <span class="required-star">*</span></label>
+                                    <input type="text" id="card-postal" placeholder="380015" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /step-2-content -->
+
+                <!-- ===== STEP 3: PAYMENT CONFIRMATION ===== -->
+                <div class="cart-section hidden" id="step-3-content">
+                    <div class="payment-success">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="9 12 11.5 14.5 16 9.5" />
+                            </svg>
+                        </div>
+                        <h2>Order Placed Successfully!</h2>
+                        <p>Thank you for your order. A confirmation email has been sent to your registered email
+                            address.</p>
+                        <p class="order-id">Order ID: <strong>#GS-2026031022</strong></p>
+                        <div class="delivery-estimate">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13" />
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                <circle cx="18.5" cy="18.5" r="2.5" />
+                            </svg>
+                            <span>Estimated Delivery By <strong>20 March, 2026</strong></span>
+                        </div>
+                        <button class="btn-continue-shopping" onclick="window.location.href='product.html'">Continue
+                            Shopping</button>
+                    </div>
+                </div>
+                <!-- /step-3-content -->
+
+            </div>
+            <!-- /cart-left -->
+
+            <!-- ========== RIGHT COLUMN: ORDER SUMMARY ========== -->
+            <div class="cart-right">
+
+                <!-- Order Summary Card -->
+                <div class="order-summary-card">
+                    <h3>Order Summary</h3>
+
+                    <!-- Mini Cart Items (dynamically populated) -->
+                    <div class="summary-items" id="summary-items">
+                        <!-- populated by cart.js -->
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row">
+                        <span>Sub Total</span>
+                        <span id="summary-subtotal">₹21,993</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span id="summary-discount">₹3,000</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span id="summary-tax">₹0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-tag" id="summary-shipping">Free</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="summary-total">₹18,993</span>
+                    </div>
+
+                    <button class="btn-checkout" id="btn-checkout" onclick="nextStep()">
+                        Proceed to Checkout
+                    </button>
+
+                    <!-- Extra info lines -->
+                    <div class="summary-info-row" id="summary-tax-note">
+                        <span><em>Tax Included. <u>Shipping</u> Calculated At Checkout..</em></span>
+                        <span class="info-toggle">+</span>
+                    </div>
+                    <div class="summary-info-row" id="summary-delivery-note">
+                        <span><em>Estimated Delivery By <strong>20 March, 2026</strong></em></span>
+                        <span class="info-toggle">+</span>
+                    </div>
+                </div>
+
+                <!-- Coupon Card -->
+                <div class="coupon-card">
+                    <h3>Have a Coupon?</h3>
+                    <div class="coupon-input-wrap">
+                        <input type="text" id="coupon-code" placeholder="Coupon Code">
+                        <button class="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /cart-right -->
+
+        </div>
+        <!-- /cart-content -->
+
+    </div>
+    <!-- /cart-page -->
+
+    <!-- ===== LOGIN REQUIRED MODAL ===== -->
+    <div class="login-modal-overlay" id="login-modal-overlay">
+        <div class="login-modal">
+            <button class="login-modal-close" id="login-modal-close" onclick="closeLoginModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="login-modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </div>
+            <h2>Sign In Required</h2>
+            <p>Please sign in or create an account to place your order. Your cart items will be saved.</p>
+            <div class="login-modal-actions">
+                <button class="btn-modal-login" id="btn-modal-login" onclick="redirectToLogin()">Sign In / Sign
+                    Up</button>
+                <button class="btn-modal-guest" id="btn-modal-guest" onclick="closeLoginModal()">Continue
+                    Browsing</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="greeting">
+        <div class="social">
+            <a class="a-linkedin" href="#">
+                <div class="linkedin"></div>
+            </a>
+            <a href="#">
+                <div class="facebook"></div>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

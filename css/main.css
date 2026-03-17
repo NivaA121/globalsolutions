@@ -4,7 +4,7 @@ html {
 
 
 
-.emergency{
+.emergency {
     width: 100%;
     height: 6.0rem;
     background-color: rgb(34, 171, 235);
@@ -12,26 +12,41 @@ html {
     color: white;
     align-content: center;
     text-align: center;
+    /* padding: 0 1rem;  */
+    padding: 1.5rem 1rem;
+    line-height: 2rem;
+    /* Use line-height to center */
+
+    /* Use Flexbox for robust vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    /* Ensures padding is included correctly */
 }
 
 .logo-home {
-    display: flex ;
-    justify-content: flex-start ;
-    align-items: center ;
-    padding: 0 2rem ;
-    max-width: 120rem ;
-    margin: auto ;
-    position: relative ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 120rem;
+    margin: auto;
+    position: relative;
+    flex-wrap: wrap;
+    /* Allow wrapping for nav */
 }
 
 .logo {
-    width: 100% ;
-    height: 8.0rem ;
-    background-image: url(../logo.png) ;
-    background-repeat: no-repeat ;
-    background-size: contain ;
-    background-position: left ;
-    display: block ;
+    width: 100%;
+    max-width: 300px;
+    /* Give logo a max-width */
+    height: 8.0rem;
+    background-image: url(../logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    display: block;
     margin-left: 0 !important;
 }
 
@@ -46,15 +61,18 @@ html {
     
     margin: 0;*/
 
-   
+
     align-items: center;
-    
+
     list-style: none;
     margin: 0;
     padding: 0%;
+    /* margin-left: auto;
+    margin-right: -30rem; */
     margin-left: auto;
-    margin-right: -30rem;
-    
+    /* This pushes the nav to the right */
+    /* REMOVED margin-right: -30rem; as it breaks layout */
+
 }
 
 .logo-home ul li {
@@ -65,8 +83,8 @@ html {
 
 }
 
-.home-select a{
-    color: rgb(34, 171, 235);   
+.home-select a {
+    color: rgb(34, 171, 235);
 }
 
 .logo-home ul li a:hover {
@@ -76,10 +94,10 @@ html {
 
 
 
-.papa{
-    
+.papa {
+
     width: 50%;
-   /* height: 50rem;*/
+    /* height: 50rem;*/
     height: calc(100vh - 14rem);
     background-image: url(../papa.jpeg);
     background-position: center;
@@ -87,14 +105,16 @@ html {
     background-repeat: no-repeat;
     z-index: 10;
     display: block;
-    
+
     padding: 0;
     margin: 0;
-} 
+    min-height: 400px;
+    /* Add a min-height */
+}
 
+/* ------------------------------------- */
 
-
-.quotes {
+/* .quotes {
     width: 50%;
     height: calc(100vh - 14rem);
     background-image: radial-gradient(#002552, #002552,#002E66, #003473, #00408f, #0049a3);
@@ -102,7 +122,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    min-height: 400px; 
     
 
 }
@@ -111,7 +131,9 @@ html {
     display: flex;
     justify-content: center;
     
-}
+} */
+
+/* ------------------------------------------ */
 /*
 .quote1 {
     position: absolute;
@@ -122,6 +144,115 @@ html {
     left: 0;    
 }
 */
+/* ----------------------------------- */
+/* .quote2 {
+    color: white;
+    font-size: 6.0rem;
+    line-height: 9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 2rem; 
+} */
+/* ------------------------------------------ */
+
+.quotes {
+    width: 100%;
+    height: calc(100vh - 14rem);
+    background-color: #002552;
+    /* Base dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Hide overflowing pseudo-elements */
+    position: relative;
+    /* Needed for absolute positioning of pseudo-elements */
+}
+
+.quotes::before,
+.quotes::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform-origin: center center;
+    opacity: 0.8;
+}
+
+.quotes::before {
+    background:
+        /* "Nebula" lights */
+        radial-gradient(circle at 70% 30%, rgba(0, 70, 150, 0.4) 0%, rgba(0, 30, 80, 0) 60%),
+        radial-gradient(circle at 30% 80%, rgba(0, 70, 150, 0.4) 0%, rgba(0, 30, 80, 0) 60%),
+
+        /* NEW: "Sparkling Nodes" (small, sharp dots) */
+        radial-gradient(circle at 20% 30%, rgba(200, 220, 255, 0.5) 0%, rgba(200, 220, 255, 0) 4px),
+        radial-gradient(circle at 80% 50%, rgba(200, 220, 255, 0.5) 0%, rgba(200, 220, 255, 0) 3px),
+        radial-gradient(circle at 50% 80%, rgba(200, 220, 255, 0.4) 0%, rgba(200, 220, 255, 0) 4px),
+        radial-gradient(circle at 75% 10%, rgba(200, 220, 255, 0.5) 0%, rgba(200, 220, 255, 0) 3px),
+        radial-gradient(circle at 10% 90%, rgba(200, 220, 255, 0.4) 0%, rgba(200, 220, 255, 0) 4px);
+
+    /* NEW: Added 'sparkle' animation */
+    animation: moveLightBackground 25s ease-in-out infinite alternate,
+        sparkle 4s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.quotes::after {
+    background: linear-gradient(135deg, rgba(34, 171, 235, 0.2) 0%, rgba(0, 52, 115, 0) 50%, rgba(34, 171, 235, 0.2) 100%);
+    /* Using a polygon clip-path to create abstract shapes / lines */
+    clip-path: polygon(10% 0%, 40% 0%, 30% 20%, 60% 20%, 50% 40%, 80% 40%, 70% 60%, 100% 60%, 90% 80%, 60% 80%, 70% 100%, 40% 100%, 50% 80%, 20% 80%, 30% 60%, 0% 60%, 10% 40%, 40% 40%, 50% 20%, 20% 20%);
+    animation: moveDarkBackground 30s linear infinite;
+    backdrop-filter: blur(5px) brightness(120%);
+    /* Adds a slight glow/blur effect */
+    z-index: 2;
+}
+
+@keyframes moveLightBackground {
+    0% {
+        transform: translate(0%, 0%) scale(1.0);
+    }
+
+    50% {
+        transform: translate(-5%, 5%) scale(1.05);
+    }
+
+    100% {
+        transform: translate(0%, 0%) scale(1.0);
+    }
+}
+
+@keyframes moveDarkBackground {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-10%, -10%) scale(1.1);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.papa-quotes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
 
 .quote2 {
     color: white;
@@ -129,8 +260,27 @@ html {
     line-height: 9rem;
     font-weight: 500;
     text-align: center;
-    
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    /* Increased shadow for better contrast */
+    position: relative;
+    /* Ensures text is above pseudo-elements */
+    z-index: 3;
+    /* Keep text on top */
 }
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7),
+            0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    to {
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9),
+            0 0 20px rgba(34, 171, 235, 0.5),
+            0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
 
 .question1 {
     height: 15rem;
@@ -141,14 +291,16 @@ html {
     font-weight: 400;
     color: #003473;
     margin-top: 3rem;
+    padding: 0 2rem;
+    /* Add padding */
 }
 
 .solution1 {
     width: 25.0rem;
-    height:22.0rem;
+    height: 22.0rem;
     border: 0.4rem solid transparent;
     border-image: linear-gradient(to bottom right, #003473, rgb(34, 171, 235));
-    
+
     border-image-slice: 1;
     border-radius: 5%;
     align-content: center;
@@ -162,14 +314,16 @@ html {
 
 .solution1 p {
     font-size: 1.9rem;
+    padding: 0 1rem;
+    /* Add padding */
 }
 
 .solution2 {
     width: 25.0rem;
-    height:22.0rem;
+    height: 22.0rem;
     border: 0.4rem solid transparent;
     border-image: linear-gradient(to bottom right, #003473, rgb(34, 171, 235));
-    
+
     border-image-slice: 1;
     border-radius: 5%;
     align-content: center;
@@ -183,14 +337,16 @@ html {
 
 .solution2 p {
     font-size: 1.9rem;
+    padding: 0 1rem;
+    /* Add padding */
 }
 
 .solution3 {
     width: 25.0rem;
-    height:22.0rem;
+    height: 22.0rem;
     border: 0.4rem solid transparent;
     border-image: linear-gradient(to bottom right, #003473, rgb(34, 171, 235));
-    
+
     border-image-slice: 1;
     border-radius: 5%;
     align-content: center;
@@ -205,6 +361,8 @@ html {
 
 .solution3 p {
     font-size: 1.9rem;
+    padding: 0 1rem;
+    /* Add padding */
 }
 
 .solutions {
@@ -212,6 +370,10 @@ html {
     justify-content: center;
     column-gap: 6%;
     margin-bottom: 10rem;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    row-gap: 3rem;
+    /* Add gap for wrapped items */
 }
 
 
@@ -224,17 +386,19 @@ html {
     font-weight: 600;
     color: white;
     margin-top: 3rem;
+    padding: 0 2rem;
+    /* Add padding */
 }
 
 .solution2-1 {
     width: 15.0rem;
-    height:15.0rem;
-    
-    
-    
+    height: 15.0rem;
+
+
+
     column-gap: 2rem;
     background-color: white;
-    
+
 }
 
 
@@ -242,13 +406,13 @@ html {
 .solution2-1 p {
     text-align: center;
     padding-top: 0.5rem;
-    
+
 }
 
 .img-p {
     width: 4rem;
     height: 4rem;
-    
+
     background-image: url(../products.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,11 +424,11 @@ html {
 
 .solution2-2 {
     width: 15.0rem;
-    height:15.0rem;
+    height: 15.0rem;
     background-color: white;
     align-content: center;
     text-align: center;
-    
+
 }
 
 
@@ -280,11 +444,11 @@ html {
 
 .solution2-3 {
     width: 15.0rem;
-    height:15.0rem;
+    height: 15.0rem;
     background-color: white;
     align-content: center;
     text-align: center;
-    
+
 }
 
 
@@ -300,11 +464,11 @@ html {
 
 .solution2-4 {
     width: 15.0rem;
-    height:15.0rem;
+    height: 15.0rem;
     background-color: white;
     align-content: center;
     text-align: center;
-    
+
 }
 
 
@@ -320,14 +484,14 @@ html {
 
 .solution2-5 {
     width: 15.0rem;
-    height:15.0rem;
+    height: 15.0rem;
     background-color: white;
     align-content: center;
     text-align: center;
-    
+
 }
 
- 
+
 
 .solution2-5 p {
     text-align: center;
@@ -347,15 +511,25 @@ html {
     line-height: 2rem;
     padding-top: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    row-gap: 3rem;
+    /* Add gap for wrapped items */
+    padding-bottom: 3rem;
+    /* Add padding for wrapped items */
 }
 
 
 .question2-soltuions2-0 {
     width: 100%;
-    height: 44rem;
+    /* height: 44rem; */
+    height: auto;
+    /* Change height to auto */
     background-image: linear-gradient(to bottom right, #003473, rgb(34, 171, 235));
     margin-top: 4.5rem;
     padding-top: 2rem;
+    padding-bottom: 5rem;
+    /* Add padding at the bottom */
 }
 
 .know {
@@ -363,9 +537,11 @@ html {
     height: 40rem;
     text-align: center;
     align-content: center;
+    padding: 0 2rem;
+    /* Add padding */
 }
 
-.know h1{
+.know h1 {
     font-size: 5rem;
     font-weight: 600;
     /*
@@ -377,13 +553,20 @@ html {
     color: #003473;
 }
 
-.know p{
+.know p {
     font-size: 2rem;
     line-height: 3rem;
 }
 
+.maps {
+    /* REMOVE the inline style="width: 50%" from your HTML! */
+    /* This CSS will make it 50% on desktop */
+    width: 50%;
 
-.maps iframe{
+}
+
+
+.maps iframe {
     /*
     width: 50%;
     height: 35rem;
@@ -393,13 +576,17 @@ html {
     style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
     width=575rem
     */
-    
+    width: 100%;
+    height: 400px;
+    border: 0;
     float: right;
-    
+
 }
 
-.know-maps{
+.know-maps {
     display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping */
 }
 
 .greeting {
@@ -410,7 +597,7 @@ html {
     background-color: #22abeb;
 }
 
-.linkedin{
+.linkedin {
     width: 3rem;
     height: 3rem;
     background-image: url(../linkedinbw.png);
@@ -419,11 +606,11 @@ html {
     background-position: center;
 }
 
-.social a{
+.social a {
     cursor: pointer;
 }
 
-.facebook{
+.facebook {
     width: 3rem;
     height: 3rem;
     background-image: url(../facebookbw.png);
@@ -432,20 +619,352 @@ html {
     background-position: center;
 }
 
-.social{
+.social {
     display: flex;
     justify-content: center;
     padding-top: 2rem;
     column-gap: 2rem;
-    
-    
+
+
+}
+
+/*
+=============================================
+     RESPONSIVE STYLES START HERE
+=============================================
+*/
+
+/* --- Hamburger Menu Styles --- */
+.nav-toggle {
+    display: none;
+    /* Hide the checkbox */
+}
+
+.nav-toggle-label {
+    display: none;
+    /* Hide the hamburger icon by default */
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure it's on top */
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #003473;
+    /* Color of the hamburger lines */
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+    content: '';
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    content: '';
+    top: 8px;
+}
+
+/* Animate hamburger to an 'X' when menu is open */
+.nav-toggle:checked~.nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 
+/* --- Tablet & Mobile (Medium to Small Screens) --- */
+@media (max-width: 1024px) {
 
+    /* Show the hamburger icon */
+    .nav-toggle-label {
+        display: block;
+    }
 
+    /* Hide the original nav list */
+    .list-home {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        /* Width of the slide-out menu */
+        height: 100vh;
+        background: #003473;
+        /* Background of the slide-out menu */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 10rem;
+        margin: 0;
+        transform: translateX(100%);
+        /* Hide the menu off-screen to the right */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
 
+    /* When the checkbox is checked, slide the menu in */
+    .nav-toggle:checked~.list-home {
+        transform: translateX(0);
+    }
 
+    .logo-home ul li {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+    }
 
+    .logo-home ul li a {
+        color: white !important;
+        /* Make nav links white */
+        font-size: 2.2rem;
+    }
 
+    .logo-home ul li a:hover {
+        color: #22abeb !important;
+        /* Hover color */
+    }
 
+    .papa,
+    .quotes {
+        width: 50%;
+        height: calc(100vh - 14rem);
+    }
+
+    .quote2 {
+        font-size: 4.5rem;
+        line-height: 7rem;
+    }
+}
+
+/* --- Small Tablet / Large Phone --- */
+@media (max-width: 768px) {
+    .emergency {
+        font-size: 1.6rem;
+    }
+
+    /* Stack hero section */
+    .papa-quotes {
+        flex-direction: column;
+    }
+
+    .papa,
+    .quotes {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .quote2 {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    /* Stack solutions */
+    .solutions {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .solution1,
+    .solution2,
+    .solution3 {
+        width: 80%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .solutions2-0 {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .solution2-1,
+    .solution2-2,
+    .solution2-3,
+    .solution2-4,
+    .solution2-5 {
+        width: 60%;
+    }
+
+    /* Stack contact/map */
+    .know-maps {
+        flex-direction: column;
+    }
+
+    .know,
+    .maps {
+        width: 100%;
+    }
+
+    .know {
+        height: auto;
+        padding: 4rem 2rem;
+    }
+
+    .maps iframe {
+        float: none;
+    }
+}
+
+/* --- Mobile (Small Screens) --- */
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    .logo {
+        max-width: 200px;
+        /* Make logo a bit smaller */
+    }
+
+    .papa,
+    .quotes {
+        height: 40vh;
+    }
+
+    .quote2 {
+        font-size: 3.0rem;
+        line-height: 4.5rem;
+    }
+
+    .question1 {
+        font-size: 2.6rem;
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    .solution1,
+    .solution2,
+    .solution3 {
+        width: 90%;
+    }
+
+    .question2 {
+        font-size: 2.8rem;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .solution2-1,
+    .solution2-2,
+    .solution2-3,
+    .solution2-4,
+    .solution2-5 {
+        width: 80%;
+    }
+
+    .know h1 {
+        font-size: 3.2rem;
+    }
+
+    .know p {
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================================
+   CART ICON – Header
+   ============================================================ */
+.nav-cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-left: 1.6rem;
+    border-radius: 50%;
+    background: rgba(0, 52, 115, 0.08);
+    transition: background 0.22s, transform 0.22s;
+    cursor: pointer;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav-cart-link:hover {
+    background: rgba(34, 171, 235, 0.15);
+    transform: scale(1.1);
+}
+
+.nav-cart-link svg {
+    width: 22px;
+    height: 22px;
+    color: #003473;
+    transition: color 0.22s;
+}
+
+.nav-cart-link:hover svg {
+    color: #22abeb;
+}
+
+.nav-cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e05c00, #f08c00);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(224, 92, 0, 0.35);
+    pointer-events: none;
+    animation: cartBadgePop 0.35s ease-out;
+}
+
+@keyframes cartBadgePop {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ---- Responsive: mobile slide-out menu cart icon ---- */
+@media (max-width: 1024px) {
+    .nav-cart-link {
+        background: rgba(255, 255, 255, 0.12);
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .nav-cart-link svg {
+        color: #fff;
+    }
+
+    .nav-cart-link:hover svg {
+        color: #22abeb;
+    }
+}

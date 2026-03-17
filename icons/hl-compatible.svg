@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Left gear -->
+  <circle cx="160" cy="256" r="52"/>
+  <path d="M160 148 v-20 M160 364 v20 M268 256 h20 M52 256 H32
+    M227 189 l14-14 M93 323 l-14 14 M227 323 l14 14 M93 189 l-14-14"
+    stroke-width="26"/>
+  <path d="M108 148 l10,28 a80,80 0 0,0-40,40 l-28,-10 l-22,38 l24,16 a80,80 0 0,0 0,52 l-24,16 l22,38 l28,-10 a80,80 0 0,0 40,40 l-10,28 h44 l10,-28 a80,80 0 0,0 40,-40 l28,10 l22,-38 l-24,-16 a80,80 0 0,0 0,-52 l24,-16 l-22,-38 l-28,10 a80,80 0 0,0-40,-40 l10,-28 z" stroke-width="24"/>
+  <!-- Arrow pointing right -->
+  <line x1="252" y1="256" x2="330" y2="256" stroke-width="26"/>
+  <polyline points="306,228 334,256 306,284" stroke-width="26"/>
+  <!-- Right gear (partial - open on left side) -->
+  <path d="M340 148 l10,28 a80,80 0 0,1 40,40 l28,-10 l22,38 l-24,16 a80,80 0 0,1 0,52 l24,16 l-22,38 l-28,-10 a80,80 0 0,1-40,40 l-10,28 h-44 l-10,-28 a80,80 0 0,1-40,-40 l-28,10 l-22,-38 l24,-16 a80,80 0 0,1 0,-52 l-24,-16 l22,-38 l28,10 a80,80 0 0,1 40,-40 l-10,-28 z" stroke-width="24"/>
+  <circle cx="352" cy="256" r="52"/>
+</svg>

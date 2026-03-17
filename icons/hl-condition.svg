@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Document body -->
+  <rect x="88" y="48" width="288" height="368" rx="28"/>
+  <!-- Lines on document -->
+  <line x1="144" y1="148" x2="320" y2="148"/>
+  <line x1="144" y1="208" x2="320" y2="208"/>
+  <line x1="144" y1="268" x2="260" y2="268"/>
+  <line x1="144" y1="328" x2="228" y2="328"/>
+  <!-- Checkmark circle (bottom right, overlapping) -->
+  <circle cx="340" cy="380" r="80" fill="white" stroke="currentColor" stroke-width="28"/>
+  <polyline points="304,380 330,406 380,354" stroke-width="30"/>
+</svg>

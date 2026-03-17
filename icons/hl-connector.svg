@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Plug body -->
+  <rect x="176" y="56" width="160" height="200" rx="24"/>
+  <!-- Prongs -->
+  <line x1="224" y1="56" x2="224" y2="16"/>
+  <line x1="288" y1="56" x2="288" y2="16"/>
+  <!-- Plug face connected to cable -->
+  <path d="M176 256 Q176 340 256 340 Q336 340 336 256"/>
+  <!-- Cable going down -->
+  <line x1="256" y1="340" x2="256" y2="420"/>
+  <!-- Cable end connector -->
+  <rect x="216" y="420" width="80" height="48" rx="14"/>
+</svg>

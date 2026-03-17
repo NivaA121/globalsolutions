@@ -4,38 +4,52 @@ html {
 
 
 
-.emergency{
+.emergency {
     width: 100%;
-    height: 6.0rem;
+    min-height: 6.0rem;
     background-color: rgb(34, 171, 235);
     font-size: 2.0rem;
     color: white;
-    align-content: center;
     text-align: center;
+    padding: 1.5rem 1rem;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .logo {
     width: 100%;
-    
+    max-width: 300px; /* Added max-width */
     background-image: url(../logo.png);
    
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 5.0rem;
     margin-top: 1rem;
-    
+    background-position: left; /* Changed from margin */
+    margin-top: 1rem;
 }
 
 .logo-home {
     display: flex;
     height: 10rem;
+    max-width: 120rem; /* Added max-width */
+    margin: 0 auto; /* Center layout */
+    padding: 0 2rem; /* Add padding */
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .logo-home ul {
     display: flex;
     align-self: center;
-    padding-right: 16.0rem;
-    
+    /* padding-right: 16.0rem; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto; /* CORRECT way to push nav right */
 }
 
 .logo-home ul li {
@@ -46,18 +60,18 @@ html {
 
 }
 
-.about-select{
+.about-select a{
     color: rgb(34, 171, 235);
 }
 
-.logo-home ul li:hover {
+.logo-home ul li a:hover {
     color: rgb(34, 171, 235);
     cursor: pointer;
 }
 
-.list-home{
+/* .list-home{
     margin-left: 80rem;
-}
+} */
 /*
 .about{
     width: 100%;
@@ -89,14 +103,24 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 
 .objective {
     width: 100%;
-    height: 16rem;
+    min-height: 16rem; /* Changed from fixed height */
+    
     background-image: linear-gradient(to bottom right,black,#001329,#001C3D,#152A51, #003473, #22abeb);
     color: white;
-    align-content: center;
-    text-align: center;
-    font-size: 2.2rem;
+    display: flex; /* Use flex for centering */
+    align-items: center;
+    justify-content: center;
+    /* text-align: center;
+    font-size: 2.2rem; */
+    padding: 2rem; /* Added padding */
+    box-sizing: border-box;
 }
 
+.objective h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0; /* This is the key fix to remove default margins */
+}
 
 
 
@@ -104,13 +128,15 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 .about-gs{
     font-size: 1.8rem;
     width: 100%;
-    height: 15rem;
+    /* height: 15rem; */
+    padding: 4rem 2rem; /* Replaced height with padding */
     align-content: center;
     text-align: center;
     line-height: 2.5rem;
+    box-sizing: border-box;
 }
 
-.offering1 {
+/* .offering1 {
     width: 15.0rem;
     height:13.0rem;
     background-color: white;
@@ -234,12 +260,51 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 .offering7 img {
     width: 4rem;
     height: 4rem;
+} */
+
+.offering1,
+.offering2,
+.offering3,
+.offering4,
+.offering5,
+.offering6,
+.offering7 {
+    width: 15.0rem;
+    /* height: auto; All heights were slightly different */
+    padding: 2rem 1rem; /* Use padding for space */
+    background-color: white;
+    text-align: center;
+    
+    
+}
+
+.offering1 p,
+.offering2 p,
+.offering3 p,
+.offering4 p,
+.offering5 p,
+.offering6 p,
+.offering7 p {
+    text-align: center;
+}
+
+.offering1 img,
+.offering2 img,
+.offering3 img,
+.offering4 img,
+.offering5 img,
+.offering6 img,
+.offering7 img {
+    width: 4rem;
+    height: 4rem;
 }
 
 .offerings {
     display: flex;
     justify-content: center;
-    column-gap: 3rem;
+    flex-wrap: wrap; /* ADDED for responsiveness */
+    gap: 3rem; /* ADDED for spacing */
+    /* column-gap: 3rem; */
     font-size: 1.7rem;
     font-weight: 600;
     line-height: 2rem;
@@ -249,10 +314,12 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 .about-gs2{
     font-size: 1.8rem;
     width: 100%;
-    height: 12rem;
+    /* height: 12rem; */
+    padding: 4rem 2rem; /* Replaced height with padding */
     align-content: center;
     text-align: center;
     line-height: 2.5rem;
+    box-sizing: border-box;
 }
 /*
 .team{
@@ -269,8 +336,10 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 
 .team{
     width: 100%;
-    height: 14rem;
+    min-height: 14rem; /* Changed from fixed height */
+    display: flex; /* Use flex for centering */
     align-content: center;
+    justify-content: center;
     text-align: center;
     
     /*
@@ -283,26 +352,33 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
     font-size: 5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    
+    padding: 2rem;
+    box-sizing: border-box;
     
 }
 
 .teams{
     background-image: linear-gradient(to bottom right,#001329,#001C3D,#152A51, #003473, #22abeb);
-    height: 61.5rem;
+    /* height: 61.5rem; */
+    height: auto; /* REMOVED fixed height */
+    padding: 2rem 0 5rem 0; /* Added padding */
 }
 
 .team7{
-    height: 10rem;
+    min-height: 10rem; /* Changed from fixed height */
     width: 30rem;
     
     border: transparent;
     border-radius: 0.5rem;
     background-color: white;
+    display: flex; /* Use flex for centering */
+    flex-direction: column;
+    justify-content: center;
     align-content: center;
     text-align: center;
     margin: 0 auto;
-
+    padding: 1rem;
+    box-sizing: border-box;
     
 }
 
@@ -316,7 +392,7 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
     font-size: 1.7rem;
 }
 
-.team1{
+/* .team1{
     height: 10rem;
     float: left;
     width: 30rem;
@@ -486,9 +562,73 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
     content: "";
     display: table;
     clear: both;
-  }
+  } */
 
-.title1{
+  .team1,
+.team3 {
+    min-height: 10rem; /* Changed from fixed height */
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    display: flex; /* Use flex for centering */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.team1 h1,
+.team3 h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team1 p,
+.team3 p {
+    font-size: 1.7rem;
+}
+
+.team2,
+.team4 {
+    min-height: 10rem; /* Changed from fixed height */
+    width: 30rem;
+    border: transparent;
+    border-radius: 0.5rem;
+    background-color: white;
+    display: flex; /* Use flex for centering */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* margin-left: 30rem; REMOVED - Use gap on parent */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.team2 h1,
+.team4 h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.team2 p,
+.team4 p {
+    font-size: 1.7rem;
+}
+
+.team1-team2,
+.team3-team4 {
+    display: flex;
+    flex-wrap: wrap; /* Added wrap */
+    margin-top: 5rem;
+    justify-content: center;
+    gap: 5rem; /* Replaced margin-left with gap */
+}
+
+/* .title1{
     height: 5rem;
     width: 100%;
     align-content: center;
@@ -644,15 +784,379 @@ linear-gradient(90deg, #1f3467, #008ad4 70%)
 .explain4_5 img {
     width: 4rem;
     height: 4rem;
+} */
+
+/* === TEXT BLOCK FIXES === */
+.title1,
+.title2,
+.title3 {
+    min-height: 5rem; /* Changed from fixed height */
+    width: 100%;
+    display: flex; /* Use flex for centering */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, black, #001C3D, #1D396D, #115895, #008AD4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.explain1,
+.explain2,
+.explain3 {
+    font-size: 1.8rem;
+    width: 100%;
+    /* height: auto; REMOVED fixed heights */
+    padding: 2rem 4rem; /* Replaced height with padding */
+    text-align: center;
+    line-height: 2.5rem;
+    box-sizing: border-box;
+}
+
+.explain4_1,
+.explain4_2,
+.explain4_3,
+.explain4_4,
+.explain4_5 {
+    width: 15.0rem;
+    padding: 2rem 1rem; /* Use padding for space */
+    background-color: white;
+    text-align: center;
+    
+}
+
+.explain4_1 p,
+.explain4_2 p,
+.explain4_3 p,
+.explain4_4 p,
+.explain4_5 p {
+    text-align: center;
+}
+
+.explain4_1 img,
+.explain4_2 img,
+.explain4_3 img,
+.explain4_4 img,
+.explain4_5 img {
+    width: 4rem;
+    height: 4rem;
 }
 
 .explain4    {
     display: flex;
     justify-content: center;
-    column-gap: 5rem;
+    flex-wrap: wrap; /* ADDED for responsiveness */
+    gap: 5rem; /* ADDED for spacing */
     font-size: 1.7rem;
     font-weight: 600;
     line-height: 2rem;
+    padding: 2rem 0rem; /* Increased padding */
+}
+
+/* === FOOTER/MAP (FROM PREVIOUS) === */
+.know {
+    width: 50%;
+    min-height: 40rem;
+    text-align: center;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.know h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #003473;
+}
+
+.know p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.maps {
+    width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+.know-maps {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.greeting {
+    width: 100%;
+    height: 7rem;
+    background-color: #22abeb;
+}
+
+.linkedin {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../linkedinbw.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.social a {
+    cursor: pointer;
+}
+
+.facebook {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../facebookbw.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    column-gap: 2rem;
+}
+
+/*
+=============================================
+     RESPONSIVE STYLES START HERE
+=============================================
+*/
+
+/* --- Hamburger Menu Styles --- */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #003473;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-label span::before {
+    content: '';
+    top: -8px;
+}
+
+.nav-toggle-label span::after {
+    content: '';
+    top: 8px;
+}
+
+.nav-toggle:checked~.nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked~.nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* --- Tablet & Mobile (Medium to Small Screens) --- */
+@media (max-width: 1024px) {
+    .logo-home {
+        padding: 0 2rem;
+    }
+
+    /* Show the hamburger icon */
+    .nav-toggle-label {
+        display: block;
+    }
+
+    /* Hide the original nav list */
+    .list-home {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: #003473;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 10rem;
+        margin: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* When the checkbox is checked, slide the menu in */
+    .nav-toggle:checked~.list-home {
+        transform: translateX(0);
+    }
+
+    .logo-home ul li {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .logo-home ul li a {
+        color: white !important; /* Make nav links white */
+        font-size: 2.2rem;
+    }
+
+    .logo-home ul li a:hover {
+        color: #22abeb !important; /* Hover color */
+    }
+
+    .team1-team2,
+    .team3-team4 {
+        gap: 3rem; /* Reduce gap on tablet */
+    }
+}
+
+/* --- Small Tablet / Large Phone --- */
+@media (max-width: 768px) {
+    .objective h1 {
+        font-size: 2.2rem;
+    }
+
+    .offerings,
+    .explain4 {
+        gap: 2rem;
+    }
+
+    .team {
+        font-size: 4rem;
+    }
+
+    /* Stack team layout */
+    .team1-team2,
+    .team3-team4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .title1,
+    .title2,
+    .title3 {
+        font-size: 2.8rem;
+    }
+
+    .explain1,
+    .explain2,
+    .explain3 {
+        padding: 2rem; /* Reduce padding */
+    }
+
+    /* Stack contact/map */
+    .know-maps {
+        flex-direction: column;
+    }
+
+    .know,
+    .maps {
+        width: 100% !important; /* Force full width, overriding inline style */
+        padding: 2rem 0;
+    }
+
+    .know {
+        min-height: auto;
+        padding: 4rem 2rem;
+    }
+
+    .maps iframe {
+        float: none;
+    }
+}
+
+/* --- Mobile (Small Screens) --- */
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    .logo-home {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        max-width: 200px;
+        margin-top: 1.5rem;
+    }
+
+    .objective h1 {
+        font-size: 2rem;
+    }
+
+    .about-gs,
+    .about-gs2 {
+        padding: 3rem 1.5rem;
+    }
+
+    .offering1, .offering2, .offering3, .offering4, .offering5, .offering6, .offering7,
+    .explain4_1, .explain4_2, .explain4_3, .explain4_4, .explain4_5 {
+        width: 13rem; /* Make items smaller to fit more */
+        font-size: 1.5rem;
+    }
+
+    .offerings, .explain4 {
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+    
+    .team {
+        font-size: 3.5rem;
+    }
+    
+    .team7, .team1, .team2, .team3, .team4 {
+        width: 90%; /* Make team boxes wider */
+    }
+
+    .title1,
+    .title2,
+    .title3 {
+        font-size: 2.6rem;
+    }
+
+    .know h1 {
+        font-size: 3.2rem;
+    }
+
+    .know p {
+        font-size: 1.8rem;
+    }
 }

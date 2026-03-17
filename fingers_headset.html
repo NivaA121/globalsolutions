@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingers Headset – Global Solutions</title>
+    <meta name="description" content="Browse Fingers headsets at Global Solutions.">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-listing.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body>
+    <header>
+        <div class="emergency">EMERGENCY HOTLINE: Are there any current security concerns? 9998020110</div>
+        <nav class="logo-home">
+            <div class="logo"></div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <ul class="list-home">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li class="contact-select"><a href="contactus.html">CONTACT US</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="cart.html" class="nav-cart-link" title="View Cart" aria-label="Shopping Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        <span class="nav-cart-badge" style="display:none">0</span>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="pl-sidebar-overlay" id="pl-sidebar-overlay"></div>
+
+    <div class="pl-page">
+        <aside class="pl-sidebar">
+            <button class="pl-sidebar-close" id="pl-sidebar-close" aria-label="Close filters">&times;</button>
+
+            <div class="pl-sidebar-section">
+                <p class="pl-sidebar-label">Browse By</p>
+                <ul class="pl-browse-list">
+                    <li><a href="fingers_earphones.html">Earphones</a></li>
+                    <li><a href="fingers_headset.html" class="pl-active">Headset</a></li>
+                    <li><a href="fingers_speakers.html">Speakers</a></li>
+                    <li><a href="fingers_peripherals.html">Peripherals</a></li>
+                    <li><a href="fingers_mic.html">Mic</a></li>
+                </ul>
+            </div>
+            <hr class="pl-divider">
+            <div class="pl-sidebar-section">
+                <p class="pl-sidebar-label">Filter By</p>
+                <div class="pl-filter-group open" id="fg-price">
+                    <button class="pl-filter-title" onclick="toggleFilter('fg-price')">Price<svg viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg></button>
+                    <div class="pl-filter-options pl-price-slider-wrap">
+                        <div class="pl-price-track"><input type="range" id="price-slider" min="0" max="5000" step="50"
+                                value="5000"></div>
+                        <div class="pl-price-labels"><span id="price-min-label">₹0</span><span
+                                id="price-slider-value">₹5,000</span></div>
+                    </div>
+                </div>
+                <div class="pl-filter-group open" id="fg-type">
+                    <button class="pl-filter-title" onclick="toggleFilter('fg-type')">Type<svg viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg></button>
+                    <div class="pl-filter-options">
+                        <label class="pl-filter-option"><input type="checkbox"> Over-Ear</label>
+                        <label class="pl-filter-option"><input type="checkbox"> On-Ear</label>
+                        <label class="pl-filter-option"><input type="checkbox"> Wireless</label>
+                    </div>
+                </div>
+                <div class="pl-filter-group" id="fg-mic">
+                    <button class="pl-filter-title" onclick="toggleFilter('fg-mic')">Microphone<svg viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg></button>
+                    <div class="pl-filter-options">
+                        <label class="pl-filter-option"><input type="checkbox"> With Mic</label>
+                        <label class="pl-filter-option"><input type="checkbox"> Without Mic</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="pl-main">
+            <div class="pl-header-row">
+                <h1 class="pl-title">Fingers Headset</h1>
+            </div>
+            <div class="pl-meta-row">
+                <button class="pl-filter-toggle" id="pl-filter-toggle" aria-label="Open filters">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                        <line x1="11" y1="18" x2="13" y2="18" />
+                    </svg>
+                    Filters
+                </button>
+
+                <span class="pl-count">5 products</span>
+                <div class="pl-sort"><label for="pl-sort-select">Sort by:</label><select id="pl-sort-select">
+                        <option>Recommended</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest</option>
+                    </select></div>
+            </div>
+            <div class="pl-grid">
+                <div class="pl-card" data-price="1499">
+                    <span class="pl-badge popular">POPULAR</span>
+                    <button class="pl-heart" onclick="toggleHeart(this)" title="Add to wishlist"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+                    <div class="pl-img-wrap"><img src="headset.png" alt="Fingers Over-Ear Headset"></div>
+                    <div class="pl-card-info">
+                        <p class="pl-card-name">Fingers Over-Ear Stereo Headset</p>
+                        <p class="pl-card-price">₹1,499</p>
+                    </div>
+                    <button class="pl-add-to-cart" onclick="addToCart(this)" title="Add to cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="pl-card" data-price="999">
+                    <button class="pl-heart" onclick="toggleHeart(this)" title="Add to wishlist"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+                    <div class="pl-img-wrap"><img src="headset.png" alt="Fingers On-Ear Headset with Mic"></div>
+                    <div class="pl-card-info">
+                        <p class="pl-card-name">Fingers On-Ear Headset w/ Mic</p>
+                        <p class="pl-card-price">₹999</p>
+                    </div>
+                    <button class="pl-add-to-cart" onclick="addToCart(this)" title="Add to cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="pl-card" data-price="2999">
+                    <span class="pl-badge new">NEW</span>
+                    <button class="pl-heart" onclick="toggleHeart(this)" title="Add to wishlist"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+                    <div class="pl-img-wrap"><img src="headset.png" alt="Fingers Wireless Headset"></div>
+                    <div class="pl-card-info">
+                        <p class="pl-card-name">Fingers Wireless Headset BT5.0</p>
+                        <p class="pl-card-price">₹2,999</p>
+                    </div>
+                    <button class="pl-add-to-cart" onclick="addToCart(this)" title="Add to cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="pl-card" data-price="599">
+                    <button class="pl-heart" onclick="toggleHeart(this)" title="Add to wishlist"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+                    <div class="pl-img-wrap"><img src="headset.png" alt="Fingers Budget Headset"></div>
+                    <div class="pl-card-info">
+                        <p class="pl-card-name">Fingers Budget USB Headset</p>
+                        <p class="pl-card-price">₹599</p>
+                    </div>
+                    <button class="pl-add-to-cart" onclick="addToCart(this)" title="Add to cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="pl-card" data-price="1999">
+                    <button class="pl-heart" onclick="toggleHeart(this)" title="Add to wishlist"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></button>
+                    <div class="pl-img-wrap"><img src="headset.png" alt="Fingers Gaming Headset"></div>
+                    <div class="pl-card-info">
+                        <p class="pl-card-name">Fingers Gaming Headset RGB</p>
+                        <p class="pl-card-price">₹1,999</p>
+                    </div>
+                    <button class="pl-add-to-cart" onclick="addToCart(this)" title="Add to cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="greeting">
+        <div class="social"><a class="a-linkedin" href="#">
+                <div class="linkedin"></div>
+            </a><a href="#">
+                <div class="facebook"></div>
+            </a></div>
+    </footer>
+    <script src="js/product-listing.js"></script>
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

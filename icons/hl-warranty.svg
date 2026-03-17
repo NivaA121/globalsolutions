@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Shield body -->
+  <path d="M256 56 L432 128 L432 256 Q432 380 256 464 Q80 380 80 256 L80 128 Z"/>
+  <!-- Checkmark inside shield -->
+  <polyline points="176,260 226,316 336,196" stroke-width="32"/>
+  <!-- Sparkle top-left -->
+  <line x1="108" y1="100" x2="108" y2="68" stroke-width="22"/>
+  <line x1="92" y1="84" x2="124" y2="84" stroke-width="22"/>
+  <!-- Sparkle top-right (larger) -->
+  <line x1="390" y1="80" x2="390" y2="40" stroke-width="22"/>
+  <line x1="370" y1="60" x2="410" y2="60" stroke-width="22"/>
+  <!-- Sparkle bottom-right small -->
+  <line x1="424" y1="368" x2="424" y2="348" stroke-width="20"/>
+  <line x1="414" y1="358" x2="434" y2="358" stroke-width="20"/>
+</svg>
