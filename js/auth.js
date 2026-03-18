@@ -1,3 +1,7 @@
+
+
+
+
 /* ============================================================
    AUTH MODULE – auth.js
    Handles sign-in, sign-up, session management via localStorage.
@@ -462,3 +466,4 @@ if (!window.location.pathname.includes('login.html')) {
         initAuthUI();
     }
 }
+
